@@ -22,8 +22,18 @@ jobs:
           mkdir /opt/test1
 
       - name: prep install
-        run: sudo apt install -y libxcb1-dev libxcb-xkb-dev libx11-xcb-dev libxcb-cursor-dev libxcb-render0-dev
+        run: sudo apt install -y libxcb1-dev libxcb-xkb-dev libx11-xcb-dev libxcb-cursor-dev libxcb-render0-dev libxkbcommon-x11-dev libxkbcommon-dev libdbus-1-dev
       - name: build qtlt
         run: ./qt-lite-512-st.sh
+
+      - name: irc report
+        uses: rectalogic/notify-irc@v1
+        with:
+          server: ${{ secrets.IRCSRV }}
+          port: ${{ secrets.IRCPORT }}
+          tls: true
+          channel: "#nuts"
+          nickname: gareport
+          message: ${{ github.repository }} compile done
 
 
