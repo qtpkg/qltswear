@@ -1,0 +1,29 @@
+name: act1
+on: push
+
+jobs:
+  job1st:
+    name: job1st
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: runmysh
+        run: |
+          env
+          date
+          pwd && ls -lh
+          echo '====='
+          pwd && ls -lh ..
+          echo '====='
+          pwd && ls -lh ../..
+          ./date.sh
+          mkdir /opt/test1
+
+      - name: prep install
+        run: sudo apt install -y libxcb1-dev libxcb-xkb-dev libx11-xcb-dev libxcb-cursor-dev libxcb-render0-dev
+      - name: build qtlt
+        run: ./qt-lite-512-st.sh
+
+
