@@ -17,9 +17,10 @@ hello world button:
 12M 程序文件，未strip
 启动程序占用12M内存，放大窗口后占用在25M左右。
 
-libQt5Core.a: 12M
+libQt5Core.a: 9.6M
 libQt5Gui.a: 9.8M
-libQt5Widgets.a: 10M
+libQt5Widgets.a: 9.1M
+libQt5Dbus.a: 1.8M
 
 去掉系统库和C/C++标准库，只有6个库链接依赖
 libxcb.so libxkbcommon.so libXau.so libXdump.so libxcb-xkb.so libfreetype.so
