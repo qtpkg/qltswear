@@ -31,10 +31,10 @@ jobs:
       - name: irc report
         uses: rectalogic/notify-irc@v1
         with:
-          server: ${{ secrets.IRCSRV }}
-          port: ${{ secrets.IRCPORT }}
+          #server: ${{ secrets.IRCSRV }}
+          #port: ${{ secrets.IRCPORT }}
           tls: true
-          channel: "#nuts"
+          channel: "#vknuts"
           nickname: gareport
           message: ${{ github.repository }} compile done
 

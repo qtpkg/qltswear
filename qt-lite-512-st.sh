@@ -27,7 +27,7 @@ if [ "$mkbuild" == "1" ]; then
 
     ../$QTSRCDIR/configure  -prefix $QTPFXDIR \
              -opensource -confirm-license -static -release -v \
-             -reduce-relocations -ltcg -optimize-size -make libs \
+             -reduce-relocations -optimize-size -make libs \
              -nomake tools -nomake examples -nomake tests \
              -dbus -no-opengl -qpa xcb -qt-zlib -qt-libjpeg -qt-libpng \
              -xcb -qt-xcb -qt-freetype -qt-pcre -qt-harfbuzz \
