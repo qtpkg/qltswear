@@ -27,7 +27,7 @@ if [ "$mkbuild" == "1" ]; then
 
     ../$QTSRCDIR/configure  -prefix $QTPFXDIR \
              -opensource -confirm-license -static -release -v \
-             -reduce-relocations -optimize-size -make libs \
+             -reduce-relocations -ltcg -optimize-size -make libs \
              -nomake tools -nomake examples -nomake tests \
              -dbus -no-opengl -qpa xcb -qt-zlib -qt-libjpeg -qt-libpng \
              -xcb -qt-xcb -qt-freetype -qt-pcre -qt-harfbuzz \
@@ -103,4 +103,6 @@ curl -T "$PFXBNAME.tar.xz" -ukitech:$BINTRAY_APIKEY \
      "https://api.bintray.com/content/kitech/os/qtpkg/v1/$PFXBNAME.tar.xz?publish=1&override=1"
 curl -X POST -ukitech:$BINTRAY_APIKEY \
      "https://api.bintray.com/content/kitech/os/qtpkg/v1/publish"
+
+echo "https://dl.bintray.com/kitech/os/$BINTRAY_APIKEY.tar.xz"
 
