@@ -60,7 +60,7 @@ if [ "$mkbuild" == "1" ]; then
              -no-feature-openssl -no-feature-openssl-linked -no-feature-ftp -no-feature-http \
              -no-feature-networkdiskcache -no-feature-networkinterface -no-feature-networkproxy \
              -no-feature-commandlineparser -no-feature-integrityfb -no-feature-integrityhid \
-             -no-feature-multiprocess -no-feature-process -no-feature-processenvironment \
+             -feature-multiprocess -no-feature-process -no-feature-processenvironment \
              -no-feature-statemachine -no-feature-kms  -no-feature-network \
              -no-feature-library -no-feature-sharedmemory \
              -no-feature-timezone -no-feature-dirmodel -no-feature-filesystemmodel
